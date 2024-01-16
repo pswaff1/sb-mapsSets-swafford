@@ -16,11 +16,23 @@ const qq3 = () => {
 
 // hasDuplicate
 const hasDuplicate = () => {
-    console.log(checkDuplicates([1,3,2,1])); // true
-    console.log(checkDuplicates([1,5,-1,4]));// false
-}
+    console.log(checkDuplicates([1, 3, 2, 1])); // true
+    console.log(checkDuplicates([1, 5, -1, 4])); // false
+};
 
 const checkDuplicates = (arr) => {
     const arrSet = new Set(arr);
     return !(arr.length === arrSet.size);
-}
+};
+
+// vowCount
+const vowelCount = (str) => {
+    let m = new Map();
+    for (let char of str) {
+        let lowerChar = char.toLowerCase();
+        if ("aeiou".includes(lowerChar)) {
+            m.set(lowerChar, 1 + (m.has(lowerChar) ? m.get(lowerChar) : 0));
+        }
+    }
+    return m;
+};
