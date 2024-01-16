@@ -13,3 +13,14 @@ const qq3 = () => {
     console.log(m.set([1, 2, 3], true)); // Map(1) {Array(3) => true}
     console.log(m.set([1, 2, 3], false)); // Map(2) {Array(3) => true, Array(3) => false}
 };
+
+// hasDuplicate
+const hasDuplicate = () => {
+    console.log(checkDuplicates([1,3,2,1])); // true
+    console.log(checkDuplicates([1,5,-1,4]));// false
+}
+
+const checkDuplicates = (arr) => {
+    const arrSet = new Set(arr);
+    return !(arr.length === arrSet.size);
+}
